@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^(.*)i=[^&]+(.*)$ [NC]
+RewriteRule ^(.*)$ /$1?%1%2 [R=301,L]
+
+ErrorDocument 404 http://www.polynotes.gq/404/
+ErrorDocument 403 http://www.polynotes.gq/403/
+
+
+
+
+# Allow access to html files
+<Files *.html>
+    allow from all
+</Files>
+
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
