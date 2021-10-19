@@ -4,7 +4,7 @@
 
     font-family: proxima;
 
-    src: url(Beauty/fonts/proxima.woff);
+    src: url(fonts/proxima.woff);
 
 }
 
@@ -12,7 +12,7 @@
 
     font-family: proximabold;
 
-    src: url(Beauty/fonts/proximabold.woff);
+    src: url(fonts/proximabold.woff);
 
 }
 
